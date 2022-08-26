@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: pytorch
-    image: centaurusinfra/swin-transform-ss-cityscapes:0.1
+    image: centaurusinfra/swin-transform-ss-cityscapes-fast
     command: ["tools/dist_train.sh", "configs/swin/upernet_swin_tiny_patch4_window7_512x512_1k_cityscapes.py", "2", "--options", "model.pretrained=swin_tiny_patch4_window7_224.pth"]
     #command: ["sh", "-c", "sleep infinity"]
     volumeMounts:
