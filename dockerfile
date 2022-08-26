@@ -11,6 +11,7 @@ RUN pip install -r requirement.txt
 RUN pip install mmcv-full==1.3.0 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html
 RUN python setup.py develop
 RUN wget https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth
+RUN python model_verify.py
 
 #CMD ["sleep", "infinity"]
 CMD ["tools/dist_train.sh", "configs/swin/upernet_swin_tiny_patch4_window7_512x512_1k_cityscapes.py", "2", "--options", "model.pretrained=swin_tiny_patch4_window7_224.pth"]

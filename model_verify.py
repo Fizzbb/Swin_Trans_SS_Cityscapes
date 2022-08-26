@@ -1,8 +1,8 @@
 from mmseg.apis import inference_segmentor, init_segmentor
 import mmcv
 
-config_file = 'configs/upernet/upernet_r50_512x1024_40k_cityscapes.py'
-checkpoint_file = 'upernet_r50_512x1024_40k_cityscapes_20200605_094827-aa54cb54.pth'
+config_file = 'configs/swin/upernet_swin_tiny_patch4_window7_512x512_1k_cityscapes.py'
+checkpoint_file = 'swin_tiny_patch4_window7_224.pth'
 
 # build the model from a config file and a checkpoint file
 model = init_segmentor(config_file, checkpoint_file, device='cuda:0')
